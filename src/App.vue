@@ -19,7 +19,7 @@ export default{
 </script>
 
 <template>
-  
+  <AppHeader/>
 </template>
 
 <style>
@@ -36,5 +36,13 @@ ul{
 img{
   max-height: 100%;
   width: auto;
+}
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
+a{
+  text-decoration: none;
+  color: black;
 }
 </style>

@@ -1,8 +1,10 @@
 <script>
+
+
 export default{
     data(){
         return{
-            NavData:[
+            Navlinks:[
             {
                 text: 'Characters',
                 url: '#',
@@ -57,8 +59,58 @@ export default{
         }
     }
 }
+
 </script>
 
-<template></template>
+<template>
+    <div class="nav-wrapper">
+        <div class="container">
+            <nav>
+                <div class="main-nav-logo">
+                    <img src="./img/dc-logo.png" alt="dc logo">
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li v-for="link in Navlinks">
+                            <a :href="link.url">{{ link.text }}</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</template>
 
-<style></style>
+<style lang="scss">
+@use './sass/mixin/justify_align_center.scss' as *;
+@use './sass/colors.scss' as *;
+
+.nav-wrapper{
+    height: 160px;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        height: 160px;
+        .main-nav-logo{
+            @include justify_align_center;
+        }
+        .nav-list{
+            @include justify_align_center;
+        }
+        ul{
+            display: flex;
+            li{
+                padding: 0;
+                margin: 0 0.6rem;
+                a{
+                    padding: 50% 8px;
+                    &:hover{
+                        color: $main-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+</style>
