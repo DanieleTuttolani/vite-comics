@@ -2,63 +2,49 @@
 export default{
     data(){
         return{
-            NavData:[
-            {
-                text: 'Characters',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Comics',
-                url: '#',
-                current: true,
-            },
-            {
-                text: 'Movies',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'TV',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Games',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Collectibles',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Videos',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Fans',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'News',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Shop',
-                url: '#',
-                current: false,
-            },
-            ]
+            
         }
     }
 }
 </script>
 
-<template></template>
+<template>
+    <footer>
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="left">
+                    <a href="#"> SING UP NOW! </a>
+                </div>
+                <div class="right">
+                    <H2>FOLLOW US</H2>
+                </div>
+            </div>
+        </div>
+    </footer>
+</template>
 
-<style></style>
+<style lang="scss" scoped>
+@use './sass/colors.scss' as *;
+footer{
+    background-color: #303030;
+    height: 180px;
+    .footer-wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 75px;
+        .left{
+            a{
+                border: 2px solid $main-blue;
+                color: white;
+                padding: 20px;
+            }
+        }
+        .right{
+            display: flex;
+            h2{
+                color: $main-blue;
+            }
+        }
+    }
+}
+</style>
