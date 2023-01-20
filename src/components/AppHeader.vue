@@ -71,7 +71,7 @@ export default{
                 </div>
                 <div class="nav-list">
                     <ul>
-                        <li v-for="link in Navlinks">
+                        <li v-for="link in Navlinks" :key="link-text">
                             <a :href="link.url">{{ link.text }}</a>
                         </li>
                         
