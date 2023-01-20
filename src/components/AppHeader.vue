@@ -82,7 +82,7 @@ export default{
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use './sass/mixin/justify_align_center.scss' as *;
 @use './sass/colors.scss' as *;
 
