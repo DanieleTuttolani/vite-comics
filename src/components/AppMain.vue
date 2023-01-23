@@ -1,9 +1,16 @@
 <script>
+import Card from './Card.vue';
+
 export default{
     data(){
         return{
             
         }
+    }
+    ,
+    components:{
+        Card,
+        
     }
 }
 </script>
@@ -12,7 +19,7 @@ export default{
     <div class="main-wrapper">
         <div class="top-main-wrapper">
             <div class="container">
-                <h1>-- Content here -- </h1>
+                <Card/>
             </div>
         </div>
         <div class="bottom-main-wrapper">
